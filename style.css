@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2 {
+    color: #8b9225;
+    font-size: 5rem;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: 3rem;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    flex-direction: column;
+}
+
+/* nav css */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display:flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 2rem;
+    align-items: start;
+}
+
+nav ul li a {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.nonnav {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* title css */
+.one {
+    background-image: url(./images/monstera.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 10rem;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.one h1 {
+    animation: title 5s;
+    opacity: 1;
+}
+
+.one p {
+    animation: subtitle 5s;
+    opacity: 0.9;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+}
+
+@keyframes title {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes subtitle {
+    0% {opacity: 0;}
+    100% {opacity: 0.9;}
+}
+
+/* about me section css */
+.two {
+    background-color: #3c4231;
+    color: white;
+    flex-direction: column;
+}
+
+.two p {
+    display: flex;
+    justify-content: start;
+    width: 70%;
+}
+
+/* projects section css */
+.three {
+    background-color: #3c4231;
+    color: black;
+}
+
+#sideshow {
+    width: 90%;
+    height: 70%;
+    position:relative;
+    display:flex;
+    background-color: #7c947c;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.slide {
+    display:flex;
+}
+
+.box {
+    padding: 10px 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.box img {
+    height: 60%;
+    max-width: 60%;
+    min-width: 30%;
+    padding: 10px 10px;
+}
+
+.caption {
+    width: 80%;
+}
+
+
+#prev,
+#next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #3c4231;
+    font-weight: bold;
+    font-size: 4rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;;
+    user-select: none;
+}
+
+#prev:hover,
+#next:hover {
+    color: white;
+}
+
+#prev {
+    left: 0px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+#next {
+    right: 0px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #8b9225;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: white;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+
+/* contact info css*/
+.four {
+    background-color: #3c4231;
+    color: white;
+}
+
+.four ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.four img {
+    height: 50px;
+    width: 50px;
+}
